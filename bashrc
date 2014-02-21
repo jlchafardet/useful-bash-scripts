@@ -299,3 +299,6 @@ function parse_svn_repository_root() {
 #411 export COLOR_LIGHT_CYAN='\033[1;36m'
 #export PS1="\[\033[00m\]\u@\h\[\033[01;34m\] \w \[\033[31m\]\$(parse_git_branch)\$(parse_svn_branch) \[\033[00m\]$\[\033[00m\] "
 export PS1="\[\033[00m\]\u@\h\[\033[01;34m\] \w \[\033[31m\]\$(parse_git_branch)\$(parse_svn_branch) \033[1;36m\]$\[\033[00m\] "
+
+## Timestamp in the prompt ----------------------------------------------
+export PROMPT_COMMAND="echo -n \[\$(date +%H:%M:%S)\]\" \""
