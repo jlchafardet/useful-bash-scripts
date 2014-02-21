@@ -140,15 +140,14 @@ alias gs='git status -s'
 alias ts='tig status'
 alias tl='tig'
 alias gl='git l'
-alias currentbranch='git symbolic-ref --short -q HEAD'
+alias currentbranch='git rev-parse --abbrev-ref HEAD'
+alias remotebranch='git rev-parse --symbolic-full-name --abbrev-ref @{u}'
 
 alias httpdr='sudo service apache2 restart'
 alias networkdr='sudo service network restart'
 alias vpndr='sudo service openvpn restart'
 alias mynotes='vim ~/.notes'
 alias fixtime="sudo /sbin/service ntpd stop; sudo /sbin/ntpdate uk.pool.ntp.org; sudo /sbin/service ntpd start"
-alias nstrace='dig +trace @8.8.8.8 scp.io'
-alias p0='ping 10.150.0.1'
 alias p8='ping 8.8.8.8'
 alias ctail='c && tail'
 alias lf="ls -l | egrep -v '^d'"
